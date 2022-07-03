@@ -33,6 +33,7 @@ public class StackAndQueue {
             temp = temp.next;
         }
     }
+
     public void queue(int data) {
         Node newnode = new Node(data);
         if (head == null) {
@@ -63,5 +64,7 @@ public class StackAndQueue {
                 }
             }
         }
+
     }
+
 }
