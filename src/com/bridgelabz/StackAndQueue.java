@@ -20,9 +20,23 @@ public class StackAndQueue {
         return newnode;
     }
 
+    public int peek() {
+        System.out.println("\nTop element is " + this.top.data);
+        return top.data;
+    }
+
+    public void poptillend() {
+        Node temp = top;
+        while (temp != null) {
+            Node tempNode = this.head;
+            this.head = tempNode.next;
+            temp = temp.next;
+        }
+    }
+
     public void display() {
         if (head == null) {
-            System.out.println("Linked list is Empty");
+            System.out.println("\nStack list is Empty");
             return;
         } else {
             System.out.print("\n The stack elements are ");
@@ -37,6 +51,5 @@ public class StackAndQueue {
                 }
             }
         }
-
     }
 }
